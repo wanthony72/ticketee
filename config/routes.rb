@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   resources :projects do
    resources :tickets
   end
+  
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
