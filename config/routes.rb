@@ -3,6 +3,13 @@ Rails.application.routes.draw do
     resources :users
   end
 
+  namespace :admin do
+    root :to => "base#index"
+    resources :users
+  end
+
+
+
   get 'users/new'
 
   get 'users/create'
