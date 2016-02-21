@@ -27,7 +27,10 @@ prohibited this user from being saved:</h2>
 <%= f.password_field :password_confirmation %>
 </p>
 
-
+<p>
+<%= f.check_box :admin %>
+<%= f.label :admin, "Is an admin?" %>
+</p>
 
 
 <% if @user.new_record? %>
